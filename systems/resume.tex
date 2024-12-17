@@ -1,0 +1,248 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+
+\makeatletter
+\newcommand{\github}[1]{%
+   \href{#1}{\faGithubSquare}%
+}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.525in}
+\addtolength{\evensidemargin}{-0.175in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{: #2 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumePoint}[1]{
+    \item{#1} \vspace{-2pt}
+}
+
+\newcommand{\resumeItemSpecial}[2]{
+  \item{
+    \textbf{#1} at \textit{#2} \hfill \vspace{-4pt}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubheading}[2]{
+  \vspace{-1pt}\item
+  \textbf{#1} $\mid$ \textit{#2}
+  \vspace{-5pt}
+}
+
+% college, place, degree, year, course
+\newcommand{\educationInfo}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+    \textit{\small#5}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItemOneliner}[2]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+
+\begin{document}
+
+{\Large \textbf{Swebert Correa}}
+\hfill
+\href{https://www.linkedin.com/in/correaswebert}{linkedin.com/in/correaswebert}\\
+
+\href{mailto:correaswebert@gatech.edu}{correaswebert@gatech.edu}
+$\cdot$
+\href{tel:4706851680}{(470) 685-1680}
+$\cdot$
+Atlanta, GA 30363
+\hfill
+\href{https://github.com/correaswebert}{github.com/correaswebert}
+
+% ------------------------------------------------------------
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \educationInfo
+      {Georgia Institute of Technology}{Atlanta, Georgia}
+      {Master of Science in Computer Science}{Aug 2024 - May 2026}
+      {Coursework: Computer Networks, Machine Learning, Securing the Internet Infrastructure \\
+      Graduate Teaching Assistant in Natural Language Processing}
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+    \educationInfo
+      {College of Engineering, Pune (COEP)}{Pune, India}
+      {Bachelor of Technology in Computer Engineering; 
+      GPA: 9.05/10.0}{Aug 2018 - Oct 2022}
+      {Coursework: Distributed Systems, Operating Systems, Computer Networks, Database Systems, Artificial Intelligence}
+  \resumeSubHeadingListEnd
+
+% ------------------------------------------------------------
+
+\section{Experience}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Rakuten Symphony}{Pune, India}
+      {Associate Software Engineer}{Jun 2022 - Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Data Rebuild and Resync}
+        {Led the design and development of data recovery subsystem for object storage by integrating erasure-coding, creating disk-sets and scanning thousands of files across disks}
+
+        \resumeItem{Server-Side Encryption}
+        {Engineered the mechanism to encrypt objects at rest using the customer-\\provided key, without disrupting replication of the erasure-coded objects across heterogeneous sites}
+
+        \resumeItem{Cluster Manager}
+        {Co-developed the event-loop based orchestrator service of object storage with team-lead to manage the life-cycle of different services like data and metadata stores, and gateways}
+
+        \resumeItem{Backup and Garbage Collection}
+        {Resolved memory and reference leaks in differential snapshots}
+
+        \resumeItem{Microservice Diagnostic Utility}
+        {Collated data from various microservices to determine the in-flight IO operations on all distributed volume managers of the cloud native block storage via pub/sub model}
+      \resumeItemListEnd
+
+    \vspace{3pt}
+
+    \resumeSubheading
+      {Citi Bank}{Pune, India}
+      {Technical Summer Analyst}{May 2021 - Jul 2021}
+      \resumeItemListStart
+        \resumeItem{DevOps}
+        {Aided in creating a continuous integration pipeline using PowerShell along with some internal tools, allowing to obtain test results emailed to all the stakeholders with a single click}
+
+        \resumeItem{Optimization}
+        {Leveraged various wait strategies to achieve a 5x reduction in code runtime}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% ------------------------------------------------------------
+
+\section{Projects}
+    \resumeSubHeadingListStart
+        % \projectSubheading
+        % {Mini Internet}
+        % {Computer Networks, Free Range Routing}
+        % \resumeItemListStart
+        %     \resumePoint{Managed router interface subnet assignments, enabling efficient IP addressing and network segmentation}
+        %     \resumePoint{Administrated OSPF and BGP for dynamic routing; applied BGP policies for customers/providers/peers}
+        %     \resumePoint{Incorporated RPKI and ROV filtering to safe-guard our AS; conducted BGP hijacks on other ASes}
+        % \resumeItemListEnd
+
+        \projectSubheading
+        {Ext2 File System for MIT xv6 OS}
+        {Operating Systems, C}
+        \resumeItemListStart
+            \resumePoint{Developed Ext2 file system, implementing buffer cache management, tree-based searching and logging}
+            \resumePoint{Updated ATA interface driver to utilize the secondary bus to enable data transfer with the Ext2 disk}
+            \resumePoint{Implemented a Virtual File System with new file-system APIs, updating corresponding syscalls}
+        \resumeItemListEnd
+
+        \projectSubheading
+        {Intel 8085 Simulator}
+        {Compilers, C}
+        \resumeItemListStart
+            \resumePoint{Implemented an assembler to compile the 8085 assembly instructions into machine code}
+            \resumePoint{Developed a virtual processor to simulate the ISA and run the machine code with step-wise execution}
+            \resumePoint{Created a ncurses terminal UI to display the contents of registers and selected memory-arena}
+        \resumeItemListEnd
+
+        \projectSubheading
+        {Music GenAI}
+        {Machine Learning, Python, Svelte}
+        \resumeItemListStart
+            \resumePoint{Implemented a genetic algorithm to generate new melody variations based on prior inputs and dataset}
+            \resumePoint{Devised a model to calculate fitness score based on user's previous acceptances and rejections}
+            \resumePoint{Developed virtual synth pad as HCI interface for  translating the genomes to and from human format}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% ------------------------------------------------------------
+
+\section{Publication}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Human-Computer Music Co-Production Using Genetic Algorithms}{Best Paper Award}
+        {IEEE International Conference on Computing, Communication, Security and Intelligent Systems}{2022}
+    \resumeSubHeadingListEnd
+
+% ------------------------------------------------------------
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem
+      {Languages}
+      {C, C++, Python, Java, Go, x86 Assembly, TypeScript, Bash (Linux Shell Scripting), SQL}
+      
+    \resumeSubItem
+      {Technologies}
+      {Kubernetes, Docker, Postgres, GDB, Valgrind, Nginx, React, Flask, Numpy, PyTorch, AWS}
+  \resumeSubHeadingListEnd
+
+\end{document}
