@@ -16,3 +16,13 @@ jobs:
         with:
           name: PDF
           path: systems/resume.pdf
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          CLEAN: true
+          SINGLE_COMMIT: true
+          FOLDER: .
+          GIT_CONFIG_NAME: Swebert Correa
+          GIT_CONFIG_EMAIL: correaswebert@gmail.com
